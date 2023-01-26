@@ -36,3 +36,19 @@ java -cp src.com.company.MyClient
 Vanilla Server Up. Listening at Port 3000.
 line: Hello World!
 ```
+
+# To build the server file `VanillaServerApp.java` into an artifact
+
+Follow the instructions here with IntelliJ
+
+- https://www.jetbrains.com/help/idea/compiling-applications.html#package_into_jar
+
+You should be able to generate a jar after building the artifact
+
+![image](images/jar.png)
+
+# Running the server with the `.jar` file
+
+```
+java -cp out/artifacts/vanillaClientApp_jar/vanillaClientApp.jar com.company.VanillaServerApp
+```
