@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class VanillaServerApp {
 
-    public static void streamInputAndPrint(Socket socket) {
+    public static void streamInputAndPrint(Socket socket) throws IOException {
         // Stream the raw input data (bytes) from the client
         try (InputStream is = socket.getInputStream()) {
             // Add a buffer to the raw input data (bytes) stream
@@ -24,6 +24,8 @@ public class VanillaServerApp {
             System.out.println("line: " + line);
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            socket.close();
         }
     }
 
